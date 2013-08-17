@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817074103) do
+ActiveRecord::Schema.define(version: 20130817074643) do
 
   create_table "table_records", force: true do |t|
     t.date     "date"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130817074103) do
     t.decimal  "value",       precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "table_id",                            null: false
   end
 
   create_table "tables", force: true do |t|

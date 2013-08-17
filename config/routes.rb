@@ -1,7 +1,11 @@
 Ledger::Application.routes.draw do
-  resources :tables
+  
+  #resources :tables
+  #resources :table_records
 
-  resources :table_records
+  resources :tables do
+    resources :table_records, as: 'records'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
