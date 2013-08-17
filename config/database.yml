@@ -11,10 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: ledger_development
+  database: railsdev/ledger_development
   pool: 5
-  username: root
-  password:
+  username: railsdev
+  password: railsdev
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and

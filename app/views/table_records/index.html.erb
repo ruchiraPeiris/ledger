@@ -1,0 +1,31 @@
+<h1>Listing table_records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @table_records.each do |table_record| %>
+      <tr>
+        <td><%= table_record.date %></td>
+        <td><%= table_record.description %></td>
+        <td><%= table_record.value %></td>
+        <td><%= link_to 'Show', table_record %></td>
+        <td><%= link_to 'Edit', edit_table_record_path(table_record) %></td>
+        <td><%= link_to 'Destroy', table_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Table record', new_table_record_path %>

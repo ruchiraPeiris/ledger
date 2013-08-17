@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @table_record.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @table_record.description %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @table_record.value %>
+</p>
+
+<%= link_to 'Edit', edit_table_record_path(@table_record) %> |
+<%= link_to 'Back', table_records_path %>
