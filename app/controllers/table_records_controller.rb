@@ -25,7 +25,9 @@ class TableRecordsController < ApplicationController
   # POST /table_records.json
   def create
     @table_record = TableRecord.new(table_record_params)
-
+    @table = Table.where( :id => params[:table_id] )
+    @table_record.table = @table
+    
     respond_to do |format|
       if @table_record.save
         format.html { redirect_to @table_record, notice: 'Table record was successfully created.' }
